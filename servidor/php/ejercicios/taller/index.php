@@ -20,19 +20,19 @@
     <form action="./recogeDatos.php" method="post">
         <label for="name">Nombre</label>
         <br>
-        <input type="text" name="name" id="name" placeholder="Nombre">
+        <input type="text" name="name" id="name" placeholder="Nombre" required>
         <br>
         <label for="license">Matrícula</label>
         <br>
-        <input type="text" name="license" id="license" placeholder="Matrícula">
+        <input type="text" name="license" id="license" placeholder="Matrícula" required>
         <br>
         <label for="tel">Teléfono</label>
         <br>
-        <input type="tel" name="tel" id="tel">
+        <input type="tel" name="tel" id="tel" placeholder="+34000000000" required>
         <br>
         <label for="email">Email</label>
         <br>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" placeholder="email@email.com" required>
         <br>
         <label for="carBrand">Marca</label>
         <select name="carBrand" id="carBrand">
