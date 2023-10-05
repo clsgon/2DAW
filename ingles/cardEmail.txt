@@ -1,0 +1,52 @@
+Pepe Luis Hernandez
+CEO
+46 Bourbon Street,
+New Orleans, EEUU
+Office Tel: 077 8765 32100
+Mobile: 077 8965 12546
+E-mail: pepelito@gmail.com
+
+Name: Juan García
+Position: Embassador
+Location: 40, Avenue, General Perón
+Office Tel: 913951036
+Mobile: 682318776
+E-mail: garcia.juan90@gmail.com
+
+Victor Seco
+Name: Michael Morgan
+Position: Swimmer
+
+11 Blue Street
+London, England
+
+tel: 931645321
+e-mail: michael.m@gmail.com
+
+Victor Rivas
+Name: Pablo García
+Position: Lawyer
+10 Picadilli, London, England
+tel: 088577930487
+mail: pablo.g@gmail.com
+
+Pepe Díaz
+Figth Fighter
+33 High Street, London, UK
+694214763
+pepediaz@gmail.com
+
+To: All employees
+From: Carlos González
+Subject: New Employer: Juan García
+
+Dear Company,
+
+I am so excited to introduce you all a new company mate. His name is Juan García,
+is the new marketing leader, who is going to lead the marketing sector, and he 
+wants to give a new point of view to this company. If you want to get in contact with his,
+send a email to "garcia.juan90@gmail.com".
+
+Good day,
+Carlos
+

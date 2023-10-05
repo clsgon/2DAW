@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+}
+
+header img{
+    width: 75%;
+}
+
+nav{
+    margin-right: 4%;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline;
+    padding: 5%;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+}
+
+main .news{
+    border-right: 3px solid blue;
+    text-align: left;
+}
+
+main .news h3{
+    margin-left: -20%;
+}
+
+main .news div{
+    margin-left: -20%;
+}
+
+main .news .news2{
+    margin-top: 30px;
+}
+
+main .announ{
+    text-align: left;
+    margin-left: 10%;
+}
+
+main .announ .announ2{
+    margin-top: 30px;
+}

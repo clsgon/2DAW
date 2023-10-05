@@ -1,0 +1,72 @@
+header{
+    text-align: center;
+}
+
+header h1{
+    background-color: yellow;
+}
+
+.main .mainPart .subPart .hidden-mobile{
+    display: none;
+}
+
+.main .mainPart .subPart .dbmore{
+    text-align: center;
+}
+
+.main .mainPart .subPart .dbmore .more{
+    background-color: white;
+    border: none;
+}
+
+.main nav{
+    border: dashed 2px green;
+    width: fit-content;
+    height: fit-content;
+}
+
+.main nav h3{
+    margin-left: 10%;
+}
+
+.main nav ul{
+    list-style: none;
+    margin-left: -20%;
+    margin-right: 18px;
+}
+
+.main nav ul li{
+    padding: 1%;
+}
+
+.main .menu{
+    display: flex;
+}
+
+.main .menu .secondMenu{
+    border: dashed 2px green;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 30%;
+}
+
+.main .menu .secondMenu h3{
+    margin-left: 10%;
+}
+
+.main .menu .secondMenu ul{
+    list-style: none;
+    margin-left: -10%;
+}
+
+.main .menu .secondMenu ul li{
+    padding: 1%;
+}
+
+.main .lastPost{
+    display: none;
+}
+
+footer{
+    text-align: center;
+}

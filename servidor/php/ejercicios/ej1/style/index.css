@@ -1,0 +1,23 @@
+body{
+    background-color: white;
+    color: brown;
+}
+
+form{
+    border: solid 1px black;
+    text-align: center;
+    margin-top: 8em;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: blanchedalmond;
+}
+
+form div{
+    margin: 0.5em;
+}
+
+.submit{
+    margin-top: 30px;
+    width: 150px;
+    height: 30px;
+}

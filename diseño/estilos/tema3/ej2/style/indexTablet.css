@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+}
+
+nav{
+    margin-right: 4%;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline;
+    padding: 5%;
+}
+
+main{
+    margin-top: 5%;
+}
+
+main .news div{
+    display: inline-block;
+    margin: 20px;
+}
+
+main .announ div{
+    display: inline-block;
+    margin: 20px;
+}

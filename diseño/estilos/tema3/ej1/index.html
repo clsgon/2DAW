@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 1028px)" href="./style/indexComp.css">
+    <link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 1027px)" href="./style/indexTablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="./style/indexMobile.css">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <header>
+        <h1>My blog about my life</h1>
+    </header>
+    <div class="main">
+        <div class="menu">
+            <nav>
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="./index.html">Index</a></li>
+                    <li><a href="./style/indexComp.css">ComputerCSS</a></li>
+                    <li><a href="./style/indexTablet.css">TabletCSS</a></li>
+                    <li><a href="./style/indexMobile.css">MobileCSS</a></li>
+                </ul>
+            </nav>
+            <div class="secondMenu">
+                <div class="lastTittle"><h3>Last Posts</h3></div>
+                <ul>
+                    <li><a href="#chap1">Meeting with supervisor</a></li>
+                    <li><a href="#chap2">NEW CAR!</a></li>
+                    <li><a href="#chap3">Visit my parents</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mainPart">
+            <div class="subPart">
+                <a name="chap1"><h1>Meeting with supervisor</h1></a>
+                <p>14 Dec 2011</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque nihil minima, voluptas atque autem omnis aliquid incidunt odio est! Harum repellendus suscipit animi est. Officia doloremque qui vero blanditiis?</p>
+                <p class="hidden-mobile" id="show-mobile1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque nihil minima, voluptas atque autem omnis aliquid incidunt odio est! Harum repellendus suscipit animi est. Officia doloremque qui vero blanditiis?</p>
+                <div class="dbmore"><button class="more" id="more0" onclick="show(0)">Leer mas...</button></div>
+            </div>
+            <div class="subPart">
+                <a name="chap2"><h1>NEW CAR!</h1></a>
+                <p>12 Dec 2011</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque nihil minima, voluptas atque autem omnis aliquid incidunt odio est! Harum repellendus suscipit animi est. Officia doloremque qui vero blanditiis?</p>
+                <p class="hidden-mobile" id="show-mobile2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque nihil minima, voluptas atque autem omnis aliquid incidunt odio est! Harum repellendus suscipit animi est. Officia doloremque qui vero blanditiis?</p>
+                <div class="dbmore"><button class="more" id="more1" onclick="show(1)">Leer mas...</button></div>
+            </div>
+            <div class="subPart">
+                <a name="chap3"><h1>Visit my parents</h1></a>
+                <p>10 Dec 2011</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque nihil minima, voluptas atque autem omnis aliquid incidunt odio est! Harum repellendus suscipit animi est. Officia doloremque qui vero blanditiis?</p>
+                <p class="hidden-mobile" id="show-mobile3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur doloremque nihil minima, voluptas atque autem omnis aliquid incidunt odio est! Harum repellendus suscipit animi est. Officia doloremque qui vero blanditiis?</p>
+                <div class="dbmore"><button class="more" id="more2" onclick="show(2)">Leer mas...</button></div>
+            </div>
+        </div>
+        <div class="lastPost">
+            <div class="lastTittle"><h3>Last Posts</h3></div>
+            <ul>
+                <li><a href="#chap1">Meeting with supervisor</a></li>
+                <li><a href="#chap2">NEW CAR!</a></li>
+                <li><a href="#chap3">Visit my parents</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>Contact me: email@email.com</p>
+    </footer>
+    <script type="text/javascript">
+        const textMore = new Array(3);
+        const more = new Array(3);
+        var checkHidden = new Array(3);
+
+        for(var i = 0; i < textMore.length; i += 1)
+            textMore[i] = document.getElementById("show-mobile" + (i + 1));
+        for(var i = 0; i < textMore.length; i += 1)
+            more[i] = document.getElementById("more" + i);
+        for(var i = 0; i < checkHidden.length; i += 1)
+            checkHidden[i] = true;
+        function show(i) {
+            if (checkHidden[i] == true)
+            {
+                textMore[i].style.display = "block";
+                more[i].innerHTML = "Leer menos...";
+                checkHidden[i] = false;
+            }
+            else
+            {
+                textMore[i].style.display = "none";
+                more[i].innerHTML = "Leer mas...";
+                checkHidden[i] = true;
+            }
+        }
+    </script>
+</body>
+</html>
