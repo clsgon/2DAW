@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Máquina de Premios</title>
+    <link rel="stylesheet" type="text/css" href="./style/maquina.css">
+    <script type="text/javascript">
+        var dinero = 100;
+        var contador = 0;
+        var premio = 0;
+        var jugada = 0;
+
+        function jugar() {
+            var num1 = Math.floor(Math.random() * 10);
+            var num2 = Math.floor(Math.random() * 10);
+            var num3 = Math.floor(Math.random() * 10);
+
+            document.getElementById("ven1").value = num1;
+            document.getElementById("ven2").value = num2;
+            document.getElementById("ven3").value = num3;
+
+            contador = 0;
+            if (num1 === 7) contador++;
+            if (num2 === 7) contador++;
+            if (num3 === 7) contador++;
+
+            if (contador === 0) {
+                premio = -1;
+            } else if (contador === 1) {
+                premio = 0;
+            } else if (contador === 2) {
+                premio = 4;
+            } else if (contador === 3) {
+                premio = 49;
+            }
+
+            dinero = dinero + premio;
+
+            document.getElementById("bandeja").value = dinero;
+
+            //alert("Has obtenido " + premio + " euros en esta jugada.");
+            var elementosResultado = [document.getElementById("ven1"), document.getElementById("ven2"), document.getElementById("ven3")];
+
+            // Agregar la clase para activar la animación
+            elementosResultado.forEach(function(elemento) {
+                elemento.classList.add("resultado");
+            });
+
+            setTimeout(function() {
+                // Eliminar la clase después de un breve retraso
+                elementosResultado.forEach(function(elemento) {
+                    elemento.classList.remove("resultado");
+                });
+            
+                // Resto del código para calcular el premio y mostrar el mensaje (como se mencionó anteriormente)
+                }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <h1>Máquina de Premios</h1>
+    <div class="cajas">
+        <input type="text" id="ven1" name="ven1" value="0" readonly/><br />
+
+        <input type="text" id="ven2" name="ven2" value="0" readonly/><br />
+
+        <input type="text" id="ven3" name="ven3" value="0" readonly/><br />
+    </div>
+    <input type="button" id="boton" value="Jugar" onclick="jugar()" /><br />
+
+    <label for="bandeja">Bandeja del Premio:</label>
+    <input type="text" id="bandeja" name="bandeja" value="100" readonly/><br />
+</body>
+</html>

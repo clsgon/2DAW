@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
+}
+
+header{
+    width: 55%;
+}
+
+header ul{
+    list-style: none;
+    padding: 0;
+    background-color: rgb(2, 243, 2);
+    margin-top: 22%;
+}
+
+main{
+    width: 75%;
+    margin: 10% 3% auto 5%;
+    background-color: yellow;
+}
+
+main h2{
+    margin-top: 0;;
+}
+
+main .des{
+    display: flex;
+    margin-bottom: 21.2%;
+}
+
+main .des .text{
+    flex-direction: column;
+}
+
+main .des img{
+    width: 110%;
+    height: 200px;
+    margin-top: 5%;
+}
+
+footer{
+    width: 28%;
+    height: fit-content;
+    margin-top: 10%;
+    background-color: gray;
+}
+
+footer h4{
+    margin-top: 0;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: row;
+}

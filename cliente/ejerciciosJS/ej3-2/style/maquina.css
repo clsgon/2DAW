@@ -1,0 +1,81 @@
+@keyframes roll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-3em); /* Desplazamiento hacia arriba */
+    }
+}
+
+body {
+    background-color: #2C3E50; /* Fondo azul oscuro */
+    color: #ECF0F1; /* Texto en color claro */
+    font-family: "Helvetica", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow: hidden; /* Evitar que los elementos se salgan de la página */
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 20px; /* Reducido el margen superior */
+    color: #E74C3C; /* Texto en color rojo oscuro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+.cajas{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+}
+
+.cajas input {
+    background-color: #34495E; /* Fondo de los números en azul oscuro */
+    border: 2px solid #E74C3C; /* Borde en rojo oscuro */
+    color: #ECF0F1; /* Texto en color claro */
+    font-size: 36px;
+    margin: 20px;
+    padding: 10px;
+    width: 60px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+#boton {
+    background-color: #E74C3C; /* Botón en color rojo oscuro */
+    border: 2px solid #C0392B; /* Borde en rojo más oscuro */
+    color: #ECF0F1; /* Texto en color claro */
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+#boton:hover {
+    background-color: #C0392B; /* Cambio de color al pasar el ratón */
+    transition: background-color 0.3s ease;
+}
+
+label {
+    display: block;
+    font-size: 24px;
+    margin-top: 20px;
+    color: #E74C3C; /* Texto de etiqueta en color rojo oscuro */
+}
+
+#bandeja {
+    background-color: #34495E; /* Fondo de la bandeja en azul oscuro */
+    border: 2px solid #E74C3C; /* Borde en rojo oscuro */
+    color: #ECF0F1; /* Texto en color claro */
+    font-size: 36px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100px;
+    border-radius: 8px; /* Bordes redondeados */
+}
