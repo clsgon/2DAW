@@ -1,3 +1,9 @@
+<?php
+    if(isset($_REQUEST["user"]) && $_REQUEST["user"] == "false")
+        echo "El nombre de usuario no existe";
+    if(isset($_REQUEST["pass"]) && $_REQUEST["pass"] == "false")
+        echo "La contraseña es incorrecta";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,5 +19,6 @@
         <input type="password" name="lpass" id="lpass" required>
         <input type="submit" value="Iniciar sesión">
     </form>
+    <a href="./signup.php">No tienes cuenta, registrate ya!</a>
 </body>
 </html>
