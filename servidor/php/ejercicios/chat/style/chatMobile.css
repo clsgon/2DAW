@@ -9,23 +9,18 @@ header{
 }
 
 header a{
-    margin-left: 65%;
-    margin-top: 3%;
+    margin-left: 50%;
+    margin-top: 5%;
 }
 
 main{
     margin-top: 10%;
+    width: 110%;
 }
 
 main .chat{
-    display: flex;
     margin-right: 10%;
     border: solid 1px black;
-}
-
-main .chat .partChat{
-    margin-left: 10%;
-    width: 300px;
 }
 
 main .send{
@@ -33,7 +28,7 @@ main .send{
 }
 
 main .send input[type=text]{
-    width: 527px;
+    width: 353px;
     height: 20px;
     border: solid 2px #6c6a6a;
     border-top-right-radius: 10px;
@@ -41,6 +36,7 @@ main .send input[type=text]{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 1%;
+    margin-left: 10px;
 }
 
 main .send input[type=text]:hover{
@@ -55,5 +51,6 @@ main .send .bsend{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     position: relative;
-    right: 70px;
+    bottom: 0px;
+    right: 60px;
 }

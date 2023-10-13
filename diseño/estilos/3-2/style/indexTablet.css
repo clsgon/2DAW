@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
+}
+
+header{
+    width: 55%;
+}
+
+header ul{
+    list-style: none;
+    padding: 0;
+    background-color: rgb(2, 243, 2);
+    margin-top: 22%;
+}
+
+main{
+    width: 100%;
+    height: 350px;
+    margin: 0% 3% auto 5%;
+    background-color: yellow;
+}
+
+main h2{
+    margin-top: 0;;
+}
+
+main .des{
+    display: flex;
+    margin-bottom: 21.2%;
+}
+
+main .des .text{
+    flex-direction: column;
+}
+
+main .des img{
+    width: 110%;
+    height: 200px;
+    margin-top: 5%;
+}
+
+footer{
+    width: 96%;
+    height: fit-content;
+    background-color: gray;
+    margin-left: 5%;
+}
+
+footer h4{
+    margin-top: 0;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+}

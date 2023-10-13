@@ -12,16 +12,21 @@ form{
     flex-direction: column;
 }
 
+form .group{
+    display: flex;
+    flex-direction: row;
+}
+
 form .campo{
     margin-top: 10%;
     display: flex;
     flex-direction: column;
+    margin-right: 10%;
 }
 
-form .campo input[type=text]{
-    width: 250px;
+form .campo input{
+    width: 150px;
     height: 30px;
-    margin-left: 3%;
     margin-top: 5%;
     border-top: none;
     border-right: none;
@@ -29,28 +34,10 @@ form .campo input[type=text]{
     border-bottom: solid 2px #e3e3e3;
 }
 
-form .campo input[type=text]:hover{
+form .campo input:hover{
     border-bottom: solid 3px #0dd6ff;
 }
 
-form .campo input[type=password]{
-    width: 250px;
-    height: 30px;
-    margin-left: 3%;
-    margin-top: 5%;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: solid 2px #e3e3e3;
-}
-
-form .campo input[type=password]:hover{
-    border-bottom: solid 3px #0dd6ff;
-}
-
-form .campo label{
-    font-size: 18px;
-}
 
 form input[type=submit]{
     margin-top: 10%;
