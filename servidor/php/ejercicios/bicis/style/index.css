@@ -1,0 +1,15 @@
+table{
+    border-collapse: collapse;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+td{
+    border: dashed 2px black;
+    padding: 7px;
+}
+
+body{
+    background-color: white;
+}
