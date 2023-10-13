@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+}
+
+header{
+    width: 100%;
+}
+
+header ul{
+    list-style: none;
+    padding: 0;
+    background-color: rgb(2, 243, 2);
+}
+
+main{
+    width: 100%;
+    height: 275px;
+    margin: 0% 3% auto 0%;
+    background-color: yellow;
+}
+
+main p{
+    font-size: 14.43px;
+}
+
+main h2{
+    margin-top: 0;
+    margin-bottom: -10px;
+}
+
+main .des{
+    display: flex;
+    margin-bottom: 21.2%;
+}
+
+main .des .text{
+    flex-direction: column;
+}
+
+main .des img{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: gray;
+}
+
+footer p{
+    font-size: 13.3px;
+}
+
+footer h4{
+    margin-top: 0;
+    margin-bottom: -10px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+}

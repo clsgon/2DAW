@@ -46,13 +46,15 @@
         if($check)
         {
             fwrite($file, "$Sname,$surname,$birthdate,$mail,$Suser,$Spass\n");
+            session_start();
+            $_SESSION["user"] = $Suser;
             header("Location: ./chat.php");
         }
     }
 
     if(isset($luser))
     {
-        
+        $check = false;
         //Comprobamos el inicio de sesión
         if(filesize($path) != 0)
         {
@@ -62,9 +64,8 @@
                 $user[] = explode(",", $linea)[4];
                 $pass[] = explode(",", $linea)[5];
             }
-            $check = false;
             for($i = 0; $i < count($user); $i += 1)
-            {                
+            {
                 if($user[$i] == $luser)
                 {
                     if($pass[$i] == $lpass)
@@ -82,9 +83,9 @@
                     }
                 }
             }
-            if(!$check)
-                header("Location: ./login.php?user=false");
         }
+        if(!$check)
+            header("Location: ./login.php?user=false");
         fclose($file);
     }
 ?>
