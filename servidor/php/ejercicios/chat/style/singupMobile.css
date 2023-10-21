@@ -10,6 +10,7 @@ main{
 form{
     display: flex;
     flex-direction: column;
+    margin-right: 35px;
 }
 
 form .group{

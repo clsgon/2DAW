@@ -2,6 +2,10 @@
     if((isset($_REQUEST["user"]) && $_REQUEST["user"] == "false") ||
             (isset($_REQUEST["pass"]) && $_REQUEST["pass"] == "false"))
         echo "Los datos no son correctos.";
+    if((isset($_REQUEST["user"])))
+        echo "El usuario no es correcto";
+    if((isset($_REQUEST["pass"])))
+        echo "La contraseña no es correcto";
 ?>
 <!DOCTYPE html>
 <html lang="en">

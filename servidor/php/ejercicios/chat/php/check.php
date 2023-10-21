@@ -33,7 +33,7 @@
         if(filesize($path) != 0)
         {
             while($linea = fgets($file))
-                $user[] = explode(",", $linea)[4];
+                $user[] = explode(",", $linea)[2];
             for($i = 0; $i < count($user); $i += 1){
                 if($user[$i] == $Suser)
                 {
@@ -45,7 +45,7 @@
         }
         if($check)
         {
-            fwrite($file, "$Sname,$surname,$birthdate,$mail,$Suser,$Spass\n");
+            fwrite($file, "$Sname,$surname,$Suser,$Spass,$mail,$birthdate\n");
             session_start();
             $_SESSION["user"] = $Suser;
             header("Location: ./chat.php");
@@ -61,8 +61,8 @@
             echo "Hola $luser comprobemos tu contraseña";
             while($linea = fgets($file))
             {
-                $user[] = explode(",", $linea)[4];
-                $pass[] = explode(",", $linea)[5];
+                $user[] = explode(",", $linea)[2];
+                $pass[] = explode(",", $linea)[3];
             }
             for($i = 0; $i < count($user); $i += 1)
             {
