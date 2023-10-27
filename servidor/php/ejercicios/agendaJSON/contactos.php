@@ -1,26 +1,4 @@
 <?php
-    $name = ucfirst(strtolower($_POST['name']));
-    $surname = ucfirst(strtolower($_POST['surname']));
-    $age = $_POST['age'];
-
-    $path = "./contactos.txt";
-    $linea = "";
-    if (file_exists($path)){
-        $myfile = fopen($path, "r+") or die("Unable to open file!");
-        while(!feof($myfile)) {
-            $linea = fgetc($myfile);
-        };
-        fwrite($myfile, $linea);
-    }
-    else
-    {
-        $myfile = fopen($path, "w") or die("Unable to open file!");
-    }
-
-    $newContact = "$name,$surname,$age\n";
-    fwrite($myfile, $newContact);
-    fclose($myfile);
-
     class Contact
     {
         public $name;
@@ -32,22 +10,41 @@
             $this->age = $age;
         }
     }
-    $numLines = 0;
+
+    $path = "./contactos.txt";
+    if (isset($_POST['name']))
+    {
+        $name = ucfirst(strtolower($_POST['name']));
+        $surname = ucfirst(strtolower($_POST['surname']));
+        $age = $_POST['age'];
+
+        $linea = "";
+        if (file_exists($path)){
+            $myfile = fopen($path, "r+") or die("Unable to open file!");
+            while(!feof($myfile)) {
+                $linea = fgetc($myfile);
+            };
+            fwrite($myfile, $linea);
+        }
+        else
+        {
+            $myfile = fopen($path, "w") or die("Unable to open file!");
+        }
+
+        $newContact = "$name,$surname,$age\n";
+        fwrite($myfile, $newContact);
+        fclose($myfile);
+    }
     $myfile = fopen($path, "r") or die("Unable to open file!");
     while ($linea = fgets($myfile)) {
         $cname[] = explode(",",$linea)[0];
         $csurname[] = explode(",",$linea)[1];
-        $cage[] = explode(",", $linea)[2];
+        $cage[] = trim(explode(",", $linea)[2], "\n");
     }
     fclose($myfile);
     for($i = 0; $i < count($cage); $i += 1)
     {
         $contactos[] = new Contact($cname[$i], $csurname[$i], $cage[$i]);
     }
-
-    $jContactos = json_encode($contactos);
-    $jsonFile = fopen("./json/contactos.json", "w");
-    fwrite($jsonFile, $jContactos);
-    fclose($jsonFile);
-    echo $jContactos;
+    echo json_encode($contactos);
 ?>

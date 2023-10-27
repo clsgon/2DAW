@@ -1,0 +1,10 @@
+<?php
+                $path = "./csv/ropa.csv";
+                $fd = fopen($path, "r");
+                while ($linea = fgets($fd)){
+                    $tipo = explode(",", $linea)[0];
+                    $size = explode(",", $linea)[1];
+                    $color = ucfirst(explode(",", $linea)[2]);
+                    echo "<option value=$tipo$size$color>$tipo$size$color</option>";
+                }
+            ?>
