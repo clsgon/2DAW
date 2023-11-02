@@ -1,50 +1,23 @@
 <?php
-    function Locations(){
-        $url = "https://www.aemet.es/es/api-eltiempo/temperaturas/2023-11-02/PB";
-        $xml = simplexml_load_file($url);
+    include './php/functions.php';
+    
+    $path = "./csv/cities.csv";
+    $path2 = "./csv/cp.csv";
 
-        $forecastData[0] = $xml->ccaa;
-
-        if ($forecastData)
+    if ((file_exists($path) && filesize($path)) && (file_exists($path2) && filesize($path2)))
+    {
+        $city = CpCsv($path);
+        $cp = CpCsv($path2);
+    }
+    else    
+    {
+        $cp = Locations();
+        for ($i = 0; $i < count($cp); $i += 1)
         {
-            foreach($forecastData[0] as $ccaa)
-            {
-                $forecastData[1] = $ccaa->provincia;
-                foreach($forecastData[1] as $prov){
-                    $forecastData[2] = $prov->ciudad;
-                    foreach($forecastData[2] as $city)
-                        if($city["capital"] == "1")
-                            $cp[] = $city["cod_ine"];
-                }
-            }
-            return $cp;
+            $url = "https://www.aemet.es/xml/municipios/localidad_$cp[$i].xml";
+            $city[] = Name($url);
         }
-    }
-
-    $cp = Locations();
-
-    function Name($url)
-    {
-        $xml = simplexml_load_file($url);
-
-        return $xml->nombre;
-    }
-
-    function DateTemp($url)
-    {
-        $xml = simplexml_load_file($url);
-
-        $forecastData = $xml->prediccion->dia;
-        if ($forecastData)
-            echo "<ul>";
-            foreach($forecastData as $dia)
-                echo "<li> Fecha: ".$dia["fecha"]." - Min: ".$dia->temperatura->minima.", Max: ".$dia->temperatura->maxima."</li>";
-            echo "</ul>";
-    }
-
-    for ($i = 0; $i < count($cp); $i += 1)
-    {
-        $url = "https://www.aemet.es/xml/municipios/localidad_$cp[$i].xml";
-        $city[] = Name($url);
+        SaveCsv($city, $path);
+        SaveCsv($cp, $path2);
     }
 ?>

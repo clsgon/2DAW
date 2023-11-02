@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" media="screen and (min-width: 1028px)" href="./style/indexC.css">
+    <link rel="stylesheet" media="screen and (min-width: 700px) and (max-width: 1028px)" href="./style/indexT.css">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="./style/indexM.css">
+    <title>Weather</title>
 </head>
 <body>
     <form action="./php/show.php" method="get">
-        <select name="city" id="city">
             <?php
                 for($i = 0; $i < count($city); $i += 1)
-                    echo "<option value=$cp[$i]>$city[$i]</option>";
-            ?>
-        </select>
-        <input type="submit" value="Mostrar datos">
+                    echo "<button type='submit' value=$cp[$i] name='city'>$city[$i]</button>";                    
+            ?>            
     </form>
 </body>
 </html>
