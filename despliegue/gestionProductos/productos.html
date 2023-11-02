@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gesti&oacute;n de Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <!-- Formulario para agregar un producto -->
+    <form action="alta_producto.php" method="post">
+        Nombre del Producto: <input type="text" name="nombre">
+        Precio: <input type="text" name="precio">
+        <input type="submit" value="Agregar">
+    </form>
+    
+    <!-- Formulario para editar un producto -->
+    <form action="modificar_producto.php" method="post">
+        ID del Producto a Modificar: <input type="text" name="id">
+        Nuevo Nombre: <input type="text" name="nuevo_nombre">
+        Nuevo Precio: <input type="text" name="nuevo_precio">
+        <input type="submit" value="Modificar">
+    </form>
+    
+    <!-- Formulario para eliminar un producto -->
+    <form action="baja_producto.php" method="post">
+        ID del Producto a Eliminar: <input type="text" name="id">
+        <input type="submit" value="Eliminar">
+    </form>
+</body>
+</html>

@@ -138,6 +138,29 @@
     </div>
     <div class="json">
         <h3>JSON: contaminación, paises, perros</h3>
+        <h4>Crear JSON</h4>
+        <pre>
+            $obj_json = json_encode($var);
+            echo $obj_json;
+        </pre>
+        <h4>Recoger JSON</h4>
+        <pre>
+            //Guardamos la dirección url de donde queremos recoger el JSON
+            $url = "http://localhost/clsgon/2DAW/servidor/php/ejercicios/agendaJSON/contactos.php";
+            //Iniciamos curl con la url del JSON
+            $curl = curl_init($url);
+            //Seteamos curl con está función y estos atributos siempre.
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+            //Sacamos y guardamos el json en una variable
+            $json = curl_exec($curl);
+            //Cerramos el curl iniciado
+            curl_close($curl);
+
+            //Decodificamos el json obtenido del curl
+            $contactos = json_decode($json);
+            //Para verificar que ha salido bien podemos mostrar el JSON completo con var_dump
+            var_dump($contactos);
+        </pre>
     </div>
     <div class="cookies">
         <h3>COOKIES: ropa</h3>
