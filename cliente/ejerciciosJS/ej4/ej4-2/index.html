@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4-2-3</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <script src="./js/ej3.js" type="text/javascript"></script>
+    <li>
+        <button onclick="Show()">Visualizar</button>
+    </li>
+    <hr>
+    <li>
+        <button onclick="Sort()">Ordenar</button>
+        <button onclick="Reverse()">Dar la vuelta</button>
+    </li>
+    <hr>
+    <li>
+        <button onclick="DeleteFirst()">Eliminar primero</button>
+        <button onclick="DeleteLast()">Eliminar útimo</button>
+    </li>
+    <hr>
+    <li>
+        <button onclick="AddFirst()">Apilar Valor</button>
+        <input type="text" name="num" id="num">
+        <button onclick="AddLast()">Encolar Valor</button>
+    </li>
+    <hr>
+    <li>
+        <input type="text" name="delete" id="delete">
+        <button onclick="DeleteElement()">Eliminar Valor</button>
+    </li>
 </body>
 </html>
