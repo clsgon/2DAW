@@ -1,0 +1,36 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+}
+.pais{
+    border: solid 1px black;
+    width: 11em;
+    height: fit-content;
+    padding: 4%;
+    margin: 30px;
+    border-radius: 30%;
+}
+
+.pais ul .linkMP{
+    font-size: 15px;
+}
+
+.pais ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.pais img{
+    width: 50%;
+}
+
+.pais ul .name{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pais ul .cap{
+    margin-bottom: 10px;
+}

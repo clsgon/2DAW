@@ -1,0 +1,37 @@
+body{
+    background-color: aliceblue;
+}
+
+.df{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 1em;
+    width: fit-content;
+    padding: 0.8em;
+    margin: 5em auto auto auto;
+}
+
+form input[type=submit]{
+    margin-top: 10px;
+}
+
+form input[type=text]{
+    width: 95%;
+    height: 2em;
+}
+
+form input[type=tel]{
+    width: 95%;
+    height: 2em;
+}
+
+form input[type=email]{
+    width: 95%;
+    height: 2em;
+}
+
+form select{
+    margin-top: 10px;
+}

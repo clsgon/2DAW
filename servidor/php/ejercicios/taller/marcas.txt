@@ -1,3 +1,0 @@
-ford,fd
-citroen, ct
-hyundai, hy

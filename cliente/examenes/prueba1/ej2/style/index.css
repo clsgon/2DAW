@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+}
+
+section{
+    width: 50%;
+    margin: auto;
+}
+
+section h3{
+    color: red;
+    text-decoration: underline;
+}
+
+header{
+    background-color: grey;
+    font-weight: bold;
+}
+
+img{
+    width: 50%;
+}
+
+.robotName{
+    color: lightgreen;
+}
+
+p{
+    color: blue;
+}

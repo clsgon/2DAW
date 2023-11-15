@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Periódica</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="./js/elements.js"></script>
+</head>
+<body>
+    <h1>Elementos de la tabla periódica en Inglés</h1>
+    <fieldset>
+        <legend>Información</legend>
+        <div class="campo">
+            <label for="elementSymbol">Símbolo (revisa abajo)</label>
+            <input type="text" name="elementSymbol" id="elementSymbol" maxlength="2">
+            <button onclick="Info()">Obtener</button>
+        </div>
+    </fieldset>
+    <fieldset>
+        <div class="campo">
+            <label for="atomicNumber">Número Atómico:</label>
+            <input type="text" name="atomicNumber" id="atomicNumber" disabled>
+        </div>
+        <div class="campo">
+            <label for="elementName">Nombre del elemento:</label>
+            <input type="text" name="elementName" id="elementName" disabled>
+        </div>
+        <div class="campo">
+            <label for="elementDate">Descubierto el año:</label>
+            <input type="text" name="elementDate" id="elementDate" disabled>
+        </div>
+    </fieldset>
+
+    <p>Lista de símbolos de la tabla periódica</p>
+    <img src="./img/periodic-table-7-21-optimized.svg" alt="tabla periódica">
+</body>
+</html>

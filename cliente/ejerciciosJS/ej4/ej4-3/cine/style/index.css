@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(232, 232, 126);
+}
+
+header{
+
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+main nav li{
+    list-style: none;
+}
+
+main .peliculas{
+    margin-left: 5%;
+    background-color: white;
+    width: 55%;
+}
+
+main .pelicula{
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+
+main .peliculas .pelicula .filmData{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .peliculas .pelicula .filmData img{
+    width: 10%;
+}
+
+main .peliculas .pelicula .filmData .info{
+    margin-left: 5%;
+}
+
+main .peliculas .pelicula .filmData .info span{
+    border: solid 1px black;
+}

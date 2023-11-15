@@ -1,0 +1,27 @@
+ul{
+    list-style: none;
+}
+
+.carrefour .marca{
+    border: solid 1px black;
+}
+
+.carrefour .marca .productos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carrefour .marca .productos div{
+    width: fit-content;
+    flex-grow: 1;
+    padding: 2%;
+    flex-basis: 100;
+}
+
+.carrefour .marca .productos div img{
+    width: 25%;
+}
+
+.carrefour .marca .productos div p{
+    width: 50%;
+}
