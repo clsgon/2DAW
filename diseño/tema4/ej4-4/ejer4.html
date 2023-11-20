@@ -51,53 +51,69 @@
     </style>
 
     <script>
-        let numElements = 0;
+        var contador = 0;
+        let products = [
+            {
+                "name": "silla",
+                "price": 50
+            },
+            {
+                "name": "mesa",
+                "price": 150
+            },
+            {
+                "name": "sofa",
+                "price": 650
+            },
+            {
+                "name": "armario",
+                "price": 330
+            }
+        ];
+
         function allowDrop(ev) {
             ev.preventDefault();
         }
 
-        function drop(ev) {
+        function add(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
             ev.target.appendChild(document.getElementById(data));
+            for(let i = 0; i < products.length; i += 1){
+                if (products[i]["name"] == data)
+                {
+                    contador += products[i]["price"];
+                    precioTotal.value = contador;
+                    div2.style.borderColor = "green";
+                }
+            }
         }
 
-        var contador = 0;
+        function remove(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            for(let i = 0; i < products.length; i += 1){
+                if (products[i]["name"] == data)
+                {
+                    contador -= products[i]["price"];
+                    precioTotal.value = contador;
+                    div2.style.borderColor = "red";
+                }
+            }
+        }
+
         function silla(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
-            var precio = 50;
-            contador += precio;
-            precioTotal.value = contador;
-            div2.style.borderColor = "green";
         }
         function mesa(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
-            var precio = 150;
-            contador += precio;
-            precioTotal.value = contador;
-            div2.style.borderColor = "green";
         }
         function sofa(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
-            var precio = 650;
-            contador += precio;
-            precioTotal.value = contador;
-            div2.style.borderColor = "green";
         }
-        function addArmario(ev) {
+        function Armario(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
-            var precio = 330;
-            contador += precio;
-            precioTotal.value = contador;
-            div2.style.borderColor = "green";
-        }
-
-        function lessArmario(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-            var precio = 330;
-            contador -= precio;
-            precioTotal.value = contador;
-            div2.style.borderColor = "red";
         }
     </script>
 </head>
@@ -105,8 +121,8 @@
 <body>
     <div>
         <h2>Elige un objeto para comprar</h2><br />
-        <div class="flex" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img width="200px" height="200px" src="img/armario.jpg" id="armario" draggable="true" ondragstart="addArmario(event)">
+        <div class="flex" id="div1" ondrop="remove(event)" ondragover="allowDrop(event)">
+            <img width="200px" height="200px" src="img/armario.jpg" id="armario" draggable="true" ondragstart="Armario(event)">
             <img width="200px" height="200px" src="img/silla.jpg" id="silla" draggable="true" ondragstart="silla(event)">
             <img width="200px" height="200px" src="img/mesa.jpg" id="mesa" draggable="true" ondragstart="mesa(event)">
             <img width="200px" height="200px" src="img/sofa.jpg" id="sofa" draggable="true" ondragstart="sofa(event)">
@@ -114,15 +130,8 @@
     </div>
 
     <h2>Cesta de la compra</h2>
-    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" ondrop="add(event)" ondragover="allowDrop(event)"></div>
     <p><b>Total a pagar:</b><input type="text" id="precioTotal" size='6'>€</p>
 
 </body>
-
 </html>
-<script type="text/javascript">
-    document.write("<fieldset>");
-    document.write("<legend>Pruebas</legend>");
-    document.write("<p>Número de elementos en el carrito de compra<p id='numElement'>0</p></p>")
-    document.write("</fieldset>");
-</script>

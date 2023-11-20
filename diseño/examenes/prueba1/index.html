@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-width: 1025px)" href="./style/index_comp.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px)" href="./style/index_tablet.css">
+    <title>Document</title>
+    <script src="./js/cookie.js"></script>
+</head>
+<body>
+    <header>
+        <img src="./img/logo.jpg" alt="logo">
+        <div class="title1"><span>El OVNI ADIFO</span></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Tempora accusantium iste consequatur quae inventore, tenetur ipsam, id libero consequuntur quaerat veniam? 
+                Velit non sapiente eaque nostrum autem quis, odio ullam.</p>
+    </header>
+    <nav>
+        <ul>
+            <li>Inicio</li>
+            <li>Conoce ADIFO</li>
+            <li>Contacta con nosotros</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="link">
+            <a href="">Que sabemos del OVNI</a>
+            <p>Si se ve desde lejos parece que es un ovni pero en verdad es objeto identificado</p>
+        </div>
+        <div class="exp">
+            <div class="title1"><span>ADIFO</span></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Magnam officiis asperiores optio ea voluptates facere similique tempore a tenetur atque, enim alias
+                 cupiditate porro, nihil ducimus libero. Unde, pariatur reiciendis. Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Et quia a laboriosam officia quisquam, cumque accusamus maiores atque praesentium
+                    consequuntur facilis nisi qui, dolorem similique veniam, eum quasi error repellendus.</p>
+        </div>
+        <div class="video">
+            <div class="title"><span>Presentación de ADIFO</span></div>
+            <video id="video" width="700" height="350" autoplay controls>
+                <source src="./video/adifo.mp4">
+            </video>
+        </div>
+        <div class="div-form">
+            <h3>Este es un formulario de Amigo de ADIFO</h3>
+            <form>
+                    <div class="data">
+                        <div class="labels">
+                            <ul>
+                                <li><label for="alias">Alias required</label></li>
+                                <li><label for="tratamiento">Tratamiento</label></li>
+                                <li><label for="age">Edad</label></li>
+                                <li><label for="mail">Email required</label></li>
+                                <li><label for="link">Página Web</label></li>
+                                <li><label for="nac">Nacimiento</label></li>
+                                <li><label for="pro">Nivel de entusiasmo con ADIFO</label></li>
+                            </ul>
+                        </div>
+                        <div class="campos">
+                            <ul>
+                                <li><input type="text" name="alias" id="alias" required></li>
+                                <li><select name="tratamiento" id="tratamiento"></li>
+                                <li><option value="sr">Sr</option></li>
+                                <li><option value="sra">Sra</option></li>
+                                <li></select></li>
+                                <li><input type="number" name="age" id="age" max="100" min="18"></li>
+                                <li><input type="email" name="mail" id="mail" required></li>
+                                <li><input type="text" name="link" id="link"></li>
+                                <li><input type="date" name="nac" id="nac"></li>
+                                <li><input type="range" name="pro" id="pro"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button onclick="Save_name()">Enviar</button>
+            </form>
+        </div>
+        <div class="div-canva">
+            <h3>Canvas fundador de meta</h3>
+            <canvas id="canva" style="background-color: grey; width: 100%;  height:300px; border: 1px solid grey; border-radius: 15px; box-shadow: 3px 3px 3px lightslategray;">
+                <script type="text/javascript">
+                    var c = document.getElementById("canva");
+                    var ctx = c.getContext("2d");
+                </script>
+            </canvas>
+        </div>
+        <footer>
+            <h3>© DAWLAARBOLEDA All rights reserved</h3>
+        </footer>
+    </main>
+</body>
+</html>

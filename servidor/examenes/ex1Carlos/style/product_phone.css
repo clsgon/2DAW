@@ -1,0 +1,19 @@
+main .product{
+    border: solid 1px black;
+    width: fit-content;
+    margin: auto;
+    margin-top: 3%;
+    padding: 10%;
+}
+
+main .product{
+    text-align: center;
+}
+
+main .product img{
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+}

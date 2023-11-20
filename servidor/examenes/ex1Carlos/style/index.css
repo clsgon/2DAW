@@ -1,0 +1,23 @@
+button{
+    text-decoration: none;
+    border: none;
+    background-color: white;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+main{
+    border: solid 1px black;
+    width: fit-content;
+    margin: auto;
+    padding: 3%;
+}
+
+main form ul li{
+    list-style: none;
+    margin-top: 5%;
+}
