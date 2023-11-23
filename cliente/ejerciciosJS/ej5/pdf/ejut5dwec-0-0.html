@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Verificación de campos de un formulario, Parte I</title>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function display_data(current_form) {
+   
+    var confirm_message = "Estos son los datos que ha introducido en el formulario:\n" + "______________________________\n\n"
+   
+    // Añadir el campo Your_Name
+    confirm_message += "Su nombre: " + current_form.user_name.value + "\n"
+
+    // Añadir el campo Your_Email
+    confirm_message += "Su correo electrónico: " + current_form.user_email.value + "\n"
+
+    confirm_message += "______________________________\n\n" + "¿Desea enviar estos datos?"
+   
+    // Solicitar al usuario que confirme el envío de los datos
+    var submit_ok = confirm(confirm_message)
+    if (submit_ok) {
+        current_form.submit()
+    }
+}
+
+//-->
+</script>
+</head>
+
+
+
+<body>
+<h3>Por favor, rellene los siguientes campos:</h3>
+
+<form action="http://www.mc.COM" method="post">
+
+<b>Nombre:</b> <br>
+<input     type="text"     name="user_name">
+<p>
+
+<b>Dirección de correo electrónico:</b>
+<br>
+<input    type="text"     name="user_email">
+
+<p>
+<input    type="button"    value="Enviar"    onClick="display_data(this.form)">
+
+</form>
+
+</body>
+</html>
