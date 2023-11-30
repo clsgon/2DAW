@@ -1,0 +1,44 @@
+form{
+    width: fit-content;
+}
+
+form .campos{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+}
+
+form .campos div{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+form .campos div label{
+    margin-top: 48%;
+}
+
+form .campos div input{
+    margin-top: 15%;
+    border: solid 2px black;
+}
+
+form .campos div input[type="number"]{
+    width: 90px;
+}
+
+form .button{
+    text-align: center;
+}
+
+form .button input{
+    text-align: left;
+    width: 90px;
+    height: 30px;
+    border: solid 2px black;
+}
+
+form .button input[type="submit"]{
+    margin-right: 30px;
+    margin-left: 30px;
+}

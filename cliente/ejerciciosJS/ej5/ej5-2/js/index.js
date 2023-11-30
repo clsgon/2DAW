@@ -71,24 +71,29 @@ function Check() {
             name.style.border = "solid 2px red";
         }
         else
-        {
             name.style.border = "solid 2px lightgreen";
-        }
-        if (parseInt(age.value) < MIN_AGE || parseInt(age.value) > MAX_AGE)
+        if (parseInt(age.value) < MIN_AGE || parseInt(age.value) > MAX_AGE || !age.value)
         {
             mess += "\t - La edad tiene que estar entre 16 y 65 años\n"
             age.value = "\0"
+            age.style.border = "solid 2px red";
         }
+        else
+            age.style.border = "solid 2px lightgreen";
         if (tel.value.length < MIN_TEL_NUMS || tel.value[0] != NUM_TEL_START)
         {
             mess += "\t - El campo teléfono ha de tener 9 dígitos, y el primero por la izquierda ha de ser un 9\n"
             tel.value = null
-        }
+            tel.style.border = "solid 2px red";
+        }else
+            tel.style.border = "solid 2px lightgreen";
         if(!CheckMail(mail.value))
         {
             mess += "\t - El correo no es correcto\n"
             mail.value = null
-        }
+            mail.style.border = "solid 2px red";
+        }else
+            mail.style.border = "solid 2px lightgreen";
         if(!mess)
         {
             mess += "Los datos son correctos"
