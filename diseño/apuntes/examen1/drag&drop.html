@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./examen1.css">
+    <title>Drag & Drop</title>
+</head>
+<body>
+    <fieldset class="main">
+        <legend class="title">
+            <ul>
+                <li><a href="./drag&drop.html">Drag&Drop</a></li>
+                <li><a href="./video.html">Video</a></li>
+                <li><a href="./canva.html">Canvas</a></li>       
+                <li><a href="./webstorage.html">Web Storage</a></li>
+                <li><a href="./sprites.html">Sprites</a></li>
+                <li><a href="./cssComponents.html">Componentes CSS</a></li>         
+            </ul>
+        </legend>
+        <fieldset class="subpart">
+            <legend>Parte html</legend>
+            <code>
+                <p>&lt;div&gt;</p>
+                <p>    &lt;h2&gt;Elige un objeto para comprar&lt;/h2&gt;&lt;br /&gt;</p>
+                <p>    &lt;div class="flex" id="div1" ondrop="remove(event)" ondragover="allowDrop(event)"&gt;</p>
+                <p>        &lt;img width="200px" height="200px" src="img/armario.jpg" id="armario" draggable="true" ondragstart="Armario(event)"&gt;</p>
+                <p>        &lt;img width="200px" height="200px" src="img/silla.jpg" id="silla" draggable="true" ondragstart="silla(event)"&gt;</p>
+                <p>        &lt;img width="200px" height="200px" src="img/mesa.jpg" id="mesa" draggable="true" ondragstart="mesa(event)"&gt;</p>
+                <p>        &lt;img width="200px" height="200px" src="img/sofa.jpg" id="sofa" draggable="true" ondragstart="sofa(event)"&gt;</p>
+                <p>    &lt;/div&gt;</p>
+                <p>&lt;/div&gt;</p>
+                <p>&lt;h2&gt;Cesta de la compra&lt;/h2&gt;</p>
+                <p>&lt;div id="div2" ondrop="add(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;</p>
+                <p>&lt;p&gt;&lt;b&gt;Total a pagar:&lt;/b&gt;&lt;input type="text" id="precioTotal" size='6'&gt;€&lt;/p&gt;</p>
+            </code>
+        </fieldset>
+        <fieldset class="subpart">
+            <legend>Parte JS</legend>
+            <code>
+                <p>var contador = 0;</p>
+                <p>let products = [</p>
+                <p>    {</p>
+                <p>        "name": "silla",</p>
+                <p>        "price": 50</p>
+                <p>    },</p>
+                <p>    {</p>
+                <p>        "name": "mesa",</p>
+                <p>        "price": 150</p>
+                <p>    },</p>
+                <p>    {</p>
+                <p>        "name": "sofa",</p>
+                <p>        "price": 650</p>
+                <p>    },</p>
+                <p>    {</p>
+                <p>        "name": "armario",</p>
+                <p>        "price": 330</p>
+                <p>    }</p>
+                <p>];</p>
+
+                <p>function allowDrop(ev) {</p>
+                <p>    ev.preventDefault();</p>
+                <p>}</p>
+                <p>function add(ev) {</p>
+                <p>    ev.preventDefault();</p>
+                <p>    var data = ev.dataTransfer.getData("text");</p>
+                <p>    ev.target.appendChild(document.getElementById(data));</p>
+                <p>    for(let i = 0; i < products.length; i += 1){</p>
+                <p>        if (products[i]["name"] == data)</p>
+                <p>        {</p>
+                <p>            contador += products[i]["price"];</p>
+                <p>            precioTotal.value = contador;</p>
+                <p>            div2.style.borderColor = "green";</p>
+                <p>        }</p>
+                <p>    }</p>
+                <p>}</p>
+                <p>function remove(ev) {</p>
+                <p>    ev.preventDefault();</p>
+                <p>    var data = ev.dataTransfer.getData("text");</p>
+                <p>    ev.target.appendChild(document.getElementById(data));</p>
+                <p>    for(let i = 0; i < products.length; i += 1){</p>
+                <p>        if (products[i]["name"] == data)</p>
+                <p>        {</p>
+                <p>            contador -= products[i]["price"];</p>
+                <p>            precioTotal.value = contador;</p>
+                <p>            div2.style.borderColor = "red";</p>
+                <p>        }</p>
+                <p>    }</p>
+                <p>}</p>
+                <p>function silla(ev) {</p>
+                <p>    ev.dataTransfer.setData("text", ev.target.id);</p>
+                <p>}</p>
+                <p>function mesa(ev) {</p>
+                <p>    ev.dataTransfer.setData("text", ev.target.id);</p>
+                <p>}</p>
+                <p>function sofa(ev) {</p>
+                <p>    ev.dataTransfer.setData("text", ev.target.id);</p>
+                <p>}</p>
+                <p>function Armario(ev) {</p>
+                <p>    ev.dataTransfer.setData("text", ev.target.id);</p>
+                <p>}</p>
+            </code>
+        </fieldset>
+    </fieldset>
+</body>
+</html>

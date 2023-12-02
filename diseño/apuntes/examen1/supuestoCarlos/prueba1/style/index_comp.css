@@ -1,0 +1,127 @@
+@font-face{
+    font-family: 'Amhara';
+    src: url("../fonts/Amhara_reduced.otf");
+}
+
+body{
+    font-family: 'Amhara';
+}
+
+header img{
+    width: 25%;
+    margin-bottom: 1%;
+}
+
+header p{
+    text-align: center;
+    color: #12a6dc;
+}
+
+nav{
+    background-color: gray;
+    width: 100%;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    color: darkorange;
+    background-color: black;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-left: -40px;
+    margin-right: 36.9px;
+    margin-bottom: 3%;
+}
+
+header img:hover{
+    animation: entVolt 1s;
+}
+
+
+nav ul li:hover{
+    animation: mediaVolt 1s;
+    color: yellow;
+}
+
+p:hover{
+    background-color:yellow;
+}
+@keyframes mediaVolt {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes entVolt {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+
+h2{
+    color: #12a6dc;
+    text-align: center;
+}
+
+h3{
+    color: #12a6dc;
+    text-align: center;
+}
+
+.video{
+    text-align: center;
+}
+
+.title{
+    color: #12a6dc;
+    font-size: x-large;
+    font-weight: bold;
+    width: 49%;
+    margin: auto;
+    text-align: left;
+}
+
+.title1{
+    color: #12a6dc;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+form{
+    background-color: grey;
+    width: 100%;
+    height: fit-content;
+    border: 1px solid grey;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px lightslategray;
+}
+
+form .data{
+    display: flex;
+    flex-direction: row;
+}
+
+form .labels ul li{
+    margin-top: 3%;
+}
+
+form .campos ul li{
+    margin-top: 1.5%;
+}
+
+
+form ul li{
+    list-style: none;
+}
+
+form button{
+    margin: 1%;
+}

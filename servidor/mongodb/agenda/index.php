@@ -11,5 +11,9 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+        $student = getContactAtType($database, "firstname", "carlos");
+        var_dump($student);
+    ?>
 </body>
 </html>

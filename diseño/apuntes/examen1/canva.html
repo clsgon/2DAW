@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./examen1.css">
+    <title>Canvas</title>
+</head>
+<body>
+    <fieldset class="main">
+        <legend class="title">
+            <ul>
+                <li><a href="./canva.html">Canvas</a></li>
+                <li><a href="./video.html">Video</a></li>                
+                <li><a href="./drag&drop.html">Drag&Drop</a></li>
+                <li><a href="./webstorage.html">Web Storage</a></li>
+                <li><a href="./sprites.html">Sprites</a></li>
+                <li><a href="./cssComponents.html">Componentes CSS</a></li>
+            </ul>
+        </legend>
+        <div>
+            <fieldset class="subpart" style="height: fit-content; width: 95%;">
+                <legend>Parte html</legend>
+                <code>
+                    <p>&lt;canvas id="canva" height="450" width="500" style="background-color: rgb(219, 155, 219);"&gt;&lt;/canvas&gt;</p>
+                </code>
+            </fieldset>
+            <fieldset class="subpart" style="height: fit-content; width: 95%;">
+                <legend>Prueba</legend>
+                <body>
+                    <canvas id="canva" height="450" width="500" style="background-color: rgb(219, 155, 219);"></canvas>
+                    <script type="text/javascript">
+                        var c = document.getElementById("canva");
+                        var ctx = c.getContext("2d");
+                
+                        //Cuadricula de fondo
+                        for(let x = 0.5; x < 500; x += 10)
+                        {
+                            ctx.moveTo(x, 0);
+                            ctx.lineTo(x, 500);
+                            ctx.stroke();
+                        }
+                
+                        for(let y = 0.3; y < 500; y += 10)
+                        {
+                            ctx.moveTo(0, y);
+                            ctx.lineTo(500, y);
+                            ctx.stroke();
+                        }
+                
+                        //Cuadrado verde esquina izquierda superior
+                        ctx.fillStyle = "#05f335";
+                        ctx.fillRect(0, 0, 175, 175); //fillRect(x, y, width, height);
+                
+                        //Configurar Sombra
+                        ctx.shadowOffsetX = 10;
+                        ctx.shadowOffsetY = 10;
+                        ctx.shadowBlur = 5;
+                        ctx.shadowColor = "rgba(0, 0, 0, 0.5)"
+                        //Cuadrado con color degradado
+                        var degradado = ctx.createLinearGradient(0, 0, 200, 380);
+                        degradado.addColorStop(0, "#05f335");
+                        degradado.addColorStop(1, "red");
+                
+                        ctx.fillStyle = degradado;
+                        ctx.fillRect(200, 75, 75, 150);
+                
+                        //Circulo
+                        ctx.beginPath();
+                        ctx.fillStyle = "#0077ff";
+                        ctx.arc(100, 300, 70, 0, 2 * Math.PI); //arc(x, y, size, 0, 2 * Math.PI);
+                        ctx.fill();
+                
+                        //Dibujar linea cuadrática
+                        ctx.beginPath();
+                        ctx.moveTo(30, 350);
+                        ctx.quadraticCurveTo(300, 350, 250, 200);
+                        ctx.strokeStyle = "black";
+                        ctx.lineWidth = 3;
+                        ctx.stroke();
+                
+                        //Agregar texto
+                        ctx.font = "Italic 35px Arial";
+                        ctx.fillStyle = "black";
+                        ctx.fillText("¡Hola mundo!", 50, 50);
+                
+                        ctx.font = "Italic 35px Arial";
+                        ctx.fillStyle = "black";
+                        ctx.fillText("XXX", 100, 100);
+                
+                        ctx.fillStyle = "#0077ff";
+                        //Cuadrados en curva
+                        for(j = 0; j < 6; j += 1)
+                        {
+                            ctx.fillRect(400, 80, 75, 75);
+                            ctx.translate(50, 50);
+                            ctx.rotate(Math.PI / 16);
+                            ctx.scale(0.7, 0.7);
+                        }
+                    </script>
+                </body>
+            </fieldset>
+        </div>
+        <fieldset class="subpart">
+            <legend>Parte JS</legend>
+            <code>
+                <p>var c = document.getElementById("canva");</p>
+                <p>var ctx = c.getContext("2d");</p>
+                <p>    </p>
+                <p>//Cuadricula de fondo</p>
+                <p>for(let x = 0.5; x < 500; x += 10)</p>
+                <p>{</p>
+                <p>    ctx.moveTo(x, 0);</p>
+                <p>    ctx.lineTo(x, 500);</p>
+                <p>    ctx.stroke();</p>
+                <p>}</p>
+                <p>for(let y = 0.3; y < 500; y += 10)</p>
+                <p>{</p>
+                <p>    ctx.moveTo(0, y);</p>
+                <p>    ctx.lineTo(500, y);</p>
+                <p>    ctx.stroke();</p>
+                <p>}</p>
+                <p>//Cuadrado verde esquina izquierda superior</p>
+                <p>ctx.fillStyle = "#05f335";</p>
+                <p>ctx.fillRect(0, 0, 175, 175); //fillRect(x, y, width, height);</p>
+                <p>//Configurar Sombra</p>
+                <p>ctx.shadowOffsetX = 10;</p>
+                <p>ctx.shadowOffsetY = 10;</p>
+                <p>ctx.shadowBlur = 5;</p>
+                <p>ctx.shadowColor = "rgba(0, 0, 0, 0.5)"</p>
+                <p>//Cuadrado con color degradado</p>
+                <p>var degradado = ctx.createLinearGradient(0, 0, 200, 380);</p>
+                <p>degradado.addColorStop(0, "#05f335");</p>
+                <p>degradado.addColorStop(1, "red");</p>
+                <p>ctx.fillStyle = degradado;</p>
+                <p>ctx.fillRect(200, 75, 75, 150);</p>
+                <p>//Circulo</p>
+                <p>ctx.beginPath();</p>
+                <p>ctx.fillStyle = "#0077ff";</p>
+                <p>ctx.arc(100, 300, 70, 0, 2 * Math.PI); //arc(x, y, size, 0, 2 * Math.PI);</p>
+                <p>ctx.fill();</p>
+                <p>//Dibujar linea cuadrática</p>
+                <p>ctx.beginPath();</p>
+                <p>ctx.moveTo(30, 350);</p>
+                <p>ctx.quadraticCurveTo(300, 350, 250, 200);</p>
+                <p>ctx.strokeStyle = "black";</p>
+                <p>ctx.lineWidth = 3;</p>
+                <p>ctx.stroke();</p>
+                <p>//Agregar texto</p>
+                <p>ctx.font = "Italic 35px Arial";</p>
+                <p>ctx.fillStyle = "black";</p>
+                <p>ctx.fillText("¡Hola mundo!", 50, 50);</p>
+                <p>ctx.font = "Italic 35px Arial";</p>
+                <p>ctx.fillStyle = "black";</p>
+                <p>ctx.fillText("XXX", 100, 100);</p>
+                <p>ctx.fillStyle = "#0077ff";</p>
+                <p>//Cuadrados en curva</p>
+                <p>for(j = 0; j < 6; j += 1)</p>
+                <p>{</p>
+                <p>    ctx.fillRect(400, 80, 75, 75);</p>
+                <p>    ctx.translate(50, 50);</p>
+                <p>    ctx.rotate(Math.PI / 16);</p>
+                <p>    ctx.scale(0.7, 0.7);</p>
+                <p>}</p>
+            </code>
+        </fieldset>
+    </fieldset>
+</body>
+</html>

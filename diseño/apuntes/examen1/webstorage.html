@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./examen1.css">
+    <title>Video</title>
+</head>
+<body>
+    <fieldset class="main">
+        <legend class="title">
+            <ul>
+                <li><a href="./webstorage.html">Web Storage</a></li>
+                <li><a href="./video.html">Video</a></li>
+                <li><a href="./canva.html">Canvas</a></li>
+                <li><a href="./drag&drop.html">Drag&Drop</a></li>
+                <li><a href="./sprites.html">Sprites</a></li>
+                <li><a href="./cssComponents.html">Componentes CSS</a></li>
+            </ul>
+        </legend>
+        <fieldset class="subpart">
+            <legend>Parte html</legend>
+            <code>
+                <p>&lt;input type="text" name="stor" id="stor"&gt;º</p>
+                <p>&lt;button onclick="Session_storage()"&gt;Enviar&lt;/button&gt;</p>
+                <p>&lt;script&gt;</p>
+                <p>    if (localStorage.getItem("localDato"))</p>
+                <p>    {</p>
+                <p>        let stor = document.getElementById("stor");</p>
+                <p>        stor.value = localStorage.getItem("localDato");</p>
+                <p>    }</p>
+                <p>&lt;/script&gt;</p>
+
+                <br>
+
+                <p>&lt;input type="text" name="stor" id="stor"&gt;</p>
+                <p>&lt;button onclick="Session_storage()"&gt;Enviar&lt;/button&gt;</p>
+                <p>&lt;script&gt;</p>
+                <p>    if (sessionStorage.getItem("dato"))</p>
+                <p>    {</p>
+                <p>        let stor = document.getElementById("stor");</p>
+                <p>        stor.value = sessionStorage.getItem("dato");</p>
+                <p>    }</p>
+                <p>&lt;/script&gt;</p>
+            </code>
+        </fieldset>
+        <fieldset class="subpart">
+            <legend>Parte JS</legend>
+            <code>
+                <p>function Local_storage(){</p>
+                <p>    let stor = document.getElementById("stor");</p>
+                <p>    localStorage.setItem("localDato", stor.value);</p>
+                <p>}</p>
+                <br>
+
+                <p>function Session_storage(){</p>
+                <p>    let stor = document.getElementById("stor");</p>
+                <p>    sessionStorage.setItem("dato", stor.value);</p>
+                <p>}</p>
+            </code>
+        </fieldset>
+    </fieldset>
+</body>
+</html>

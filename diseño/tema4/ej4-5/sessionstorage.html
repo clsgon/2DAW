@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+    <script>
+        function Session_storage(){
+            let stor = document.getElementById("stor");
+            sessionStorage.setItem("dato", stor.value);
+        }
+   </script>
+</head>
+<body>
+    <input type="text" name="stor" id="stor">
+    <button onclick="Session_storage()">Enviar</button>
+    <script>
+        if (sessionStorage.getItem("dato"))
+        {
+            let stor = document.getElementById("stor");
+            stor.value = sessionStorage.getItem("dato");
+        }
+    </script>
+</body>
+</html>

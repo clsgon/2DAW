@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <script>
+        function Session_storage(){
+            let stor = document.getElementById("stor");
+            localStorage.setItem("localDato", stor.value);
+        }
+   </script>
+</head>
+<body>
+    <input type="text" name="stor" id="stor">
+    <button onclick="Session_storage()">Enviar</button>
+    <script>
+        if (localStorage.getItem("localDato"))
+        {
+            let stor = document.getElementById("stor");
+            stor.value = localStorage.getItem("localDato");
+        }
+    </script>
+</body>
+</html>

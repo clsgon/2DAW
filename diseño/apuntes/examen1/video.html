@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./examen1.css">
+    <title>Video</title>
+</head>
+<body>
+    <fieldset class="main">
+        <legend class="title">
+            <ul>
+                <li><a href="./video.html">Video</a></li>
+                <li><a href="./canva.html">Canvas</a></li>
+                <li><a href="./drag&drop.html">Drag&Drop</a></li>
+                <li><a href="./webstorage.html">Web Storage</a></li>
+                <li><a href="./sprites.html">Sprites</a></li>
+                <li><a href="./cssComponents.html">Componentes CSS</a></li>
+            </ul>
+        </legend>
+        <fieldset class="subpart">
+            <legend>Parte html</legend>
+            <code>
+                <p>&lt;video id="video" width="700" height="350"&gt;</p>
+                <p>&emsp;&lt;source src="./video/video.mp4"&gt;</p>
+                <p>&lt;/video&gt;</p>
+                <p>&lt;button onclick="Begin()"&gt;Iniciar&lt;/button&gt;</p>
+                <p>&lt;button onclick="Pause()"&gt;Pausar&lt;/button&gt;</p>
+                <p>&lt;button onclick="Start()"&gt;Inicio&lt;/button&gt;</p>
+                <p>&lt;button onclick="MoveForward()"&gt;Avanzar&lt;/button&gt;</p>
+                <p>&lt;button onclick="MoveBackward()"&gt;Retroceder&lt;/button&gt;</p>
+                <p>&lt;button onclick="End()"&gt;Fin&lt;/button&gt;</p>
+                <p>&lt;button onclick="FullScreen()"&gt;Pantalla completa&lt;/button&gt;</p>
+                <p>&lt;input type="range" name="volumne" id="volume" min="0" max="1" step="0.01"&gt;</p>
+                <p>&lt;input type="range" name="progress" id="progress"&gt;</p>
+                <p>&lt;script src="./js/video.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+            </code>
+        </fieldset>
+        <fieldset class="subpart">
+            <legend>Parte JS</legend>
+            <code>
+                <p>let video = document.getElementById("video");</p>
+                <p>let progress = document.getElementById("progress");</p>
+                <p>let volume = document.getElementById("volume");</p>
+                <p>function Begin(){</p>
+                    <p>video.play();</p>
+                <p>}</p>
+                <p>function Pause(){</p>
+                    <p>video.pause();</p>
+                <p>}</p>
+                <p>function FullScreen(){</p>
+                    <p>video.requestFullscreen();</p>
+                <p>}</p>
+                <p>function Start()</p>
+                <p>{</p>
+                    <p>video.load();</p>
+                <p>}</p>
+                <p>function MoveForward(){</p>
+                    <p>video.currentTime = video.currentTime + 10;</p>
+                <p>}</p>
+                <p>function MoveBackward(){</p>
+                    <p>video.currentTime = video.currentTime - 10;</p>
+                <p>}</p>
+                <p>function End() {</p>
+                    <p>video.currentTime = video.duration;</p>
+                <p>}</p>
+                <p>volume.addEventListener('input', () => video.volume = volume.value);</p>
+                <p>progress.addEventListener('input', () => progress.value = video.currentTime);</p>
+            </code>
+        </fieldset>
+    </fieldset>
+</body>
+</html>
